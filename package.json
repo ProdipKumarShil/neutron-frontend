@@ -10,11 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@gsap/react": "^2.0.2",
     "axios": "^1.6.3",
+    "gsap": "^3.12.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.49.2",
     "react-router-dom": "^6.21.1",
+    "split-type": "^0.3.4",
     "sweetalert2": "^11.10.2"
   },
   "devDependencies": {
