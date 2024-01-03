@@ -1,17 +1,11 @@
 import { useEffect, useState } from "react"
 import SingleCard from "../SingleCard"
 import axios from "axios"
+import ContactCards from "./ContactCards"
 
 const AllContact = () => {
-  const [contacts, setContacts] = useState([])
-  useEffect(() => {
-    axios.get('https://contact-management-navy.vercel.app/contact/allContacts')
-      .then(res => {
-        setContacts(res.data.contact)
-      })
-  }, [])
+  
 
-  console.log(contacts)
   
   return (
     <div className="max-w-screen-xl mx-auto">
@@ -60,11 +54,7 @@ const AllContact = () => {
       </div>
 
       {/* card section */}
-      <div className="grid grid-cols-2 gap-4">
-        {
-          contacts?.map((contact) => <SingleCard contact={contact} key={contact._id}/>)
-        }
-      </div>
+      <ContactCards />
     </div>
   )
 }

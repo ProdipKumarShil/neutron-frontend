@@ -5,6 +5,7 @@ const AddContact = () => {
   const {register, formState: {errors}, handleSubmit} = useForm()
 
   const onSubmit = (data) => {
+    console.log(data)
     axios.post('https://contact-management-navy.vercel.app/contact/postContact', data)
       .then(res => {
         if(res.data.status){
